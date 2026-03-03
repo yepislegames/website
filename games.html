@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Yepisle Games</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="EndGam Gaming Magazine Template">
+	<meta name="keywords" content="endGam,gGaming, magazine, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/icon.ico" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+	<style>
+   @keyframes neonPulse {
+    0% {
+        text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+        opacity: 0.8;
+    }
+    50% {
+        text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff,
+        0 0 80px #ff00ff;
+        opacity: 1;
+    }
+    100% {
+        text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+        opacity: 0.85;
+    }
+
+
+}
+@keyframes purpleNeon {
+  0% {
+    text-shadow:
+      0 0 6px #a855f7,
+      0 0 12px #9333ea,
+      0 0 24px #7c3aed;
+    opacity: 0.85;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #c084fc,
+      0 0 20px #a855f7,
+      0 0 40px #7c3aed,
+      0 0 80px #6d28d9;
+    opacity: 1;
+  }
+}
+.hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 64px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f5e9ff;
+  animation: purpleNeon 2.5s infinite alternate;
+  background: rgba(120, 60, 180, 0.15);
+  padding: 20px 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+.hero-title {
+  margin-top: 93px;
+}
+
+/* Neon efektli slogan */
+
+/* Neon efektli slogan açık mor */
+.hero-slogan {
+    color: #fff; /* ana yazı beyaz */
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+    text-shadow:
+        0 0 5px #d8b3ff,
+        0 0 10px #d8b3ff,
+        0 0 20px #d8b3ff,
+        0 0 40px #b788ff,
+        0 0 80px #b788ff;
+    animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+/* Neon parlama animasyonu */
+@keyframes neonGlow {
+    0% {
+        text-shadow:
+            0 0 5px #d8b3ff,
+            0 0 10px #d8b3ff,
+            0 0 20px #d8b3ff,
+            0 0 40px #b788ff,
+            0 0 80px #b788ff;
+    }
+    50% {
+        text-shadow:
+            0 0 10px #d8b3ff,
+            0 0 20px #d8b3ff,
+            0 0 30px #d8b3ff,
+            0 0 50px #b788ff,
+            0 0 100px #b788ff;
+    }
+    100% {
+        text-shadow:
+            0 0 5px #d8b3ff,
+            0 0 10px #d8b3ff,
+            0 0 20px #d8b3ff,
+            0 0 40px #b788ff,
+            0 0 80px #b788ff;
+    }
+}
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #a855f7, #9333ea);
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7), 0 0 30px rgba(147, 51, 234, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.9), 0 0 50px rgba(147, 51, 234, 0.7);
+}
+
+
+
+.video-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark overlay — yazıların okunaklı kalması için */
+.video-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
+
+/* Yazıları öne al */
+.video-hero .container {
+    position: relative;
+    z-index: 5;
+}
+.play-text {
+  margin-top: 25px;
+    font-size: 28px;
+    color: #fff !important;  /* Beyaz ve override için !important ekledik */
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #b788ff; /* Hafif neon efekti */
+    font-weight: bold;
+}
+/* Video section */
+.video-bg-section {
+   margin-top: 0; /* üst boşluğu kaldır */
+    padding-top: 0;
+    background-color: rgba(109, 40, 217, 1); /* artık tamamen opak mor */
+}
+
+
+.video-bg-section .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.play-wrapper {
+    text-align: center;
+    padding: 120px 0;
+}
+
+.big-play-btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 160px;
+   height: 160px;
+   border-radius: 50%;
+   background: radial-gradient(circle, rgba(109,40,217,1) 0%, rgba(128,0,128,1) 100%);
+   color: white;
+   font-size: 60px;
+   text-decoration: none;
+   box-shadow: 0 0 20px #a855f7, 0 0 40px #9333ea, 0 0 80px #6d28d9;
+   transition: all 0.3s ease;
+}
+
+/* Hover animasyon */
+.big-play-btn:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow:
+        0 0 40px #ff00ff,
+        0 0 80px #ff00ff,
+        0 0 120px #6a00ff;
+}
+
+
+.play-text {
+    margin-top: 25px;
+    font-size: 28px;
+    color: black;
+    letter-spacing: 2px;
+}
+ /* HEADER */
+.header-section {
+     position: relative;
+    z-index: 10;
+    background-color: #9b59b6; /* tatlı mor */
+    backdrop-filter: blur(0px); /* pusu kaldır */
+    margin: 0;
+    padding: 0;
+}
+
+.header-warp {
+    display: flex;
+    flex-direction: column; /* üstte sosyal, altta logo+menu */
+    margin: 0;
+    padding: 0;
+}
+
+.header-social {
+   display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 20px 0 20px; /* üst boşluk 20px */
+    padding: 0 20px;
+}
+
+.header-social p {
+    margin: 0; /* Follow us yazısının üst-alt boşluklarını kaldır */
+}
+
+.header-bar-warp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* dikey ortala */
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Menü linkleri üst boşluklarını sıfırla */
+.main-menu li a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer menüyü ortala */
+.footer-menu {
+    display: flex;              /* linkleri yatay sırala */
+    justify-content: center;    /* ortala */
+    gap: 30px;                  /* linkler arası boşluk */
+    list-style: none;           /* bulletleri kaldır */
+    margin: 20px 0;             /* üst-alt boşluk */
+    padding: 0;
+}
+
+.footer-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* Footer menüyü yatay ve ortalı yap */
+.footer-menu {
+    display: flex;               /* linkleri yatay sırala */
+    justify-content: center;     /* menüyü ortala */
+    align-items: center;         /* dikey ortala */
+    gap: 40px;                   /* linkler arası boşluk */
+    list-style: none;            /* bulletleri kaldır */
+    margin: 20px 0;              /* üst-alt boşluk */
+    padding: 0;
+}
+
+/* Footer linkleri */
+.footer-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;             /* footer için uygun font */
+    transition: color 0.3s;
+}
+
+.footer-menu li a:hover {
+    color: #a855f7;              /* hover efekti */
+}
+/* Ana Menü Elemanlarını Ayır */
+.main-menu li {
+    display: inline-block;
+    margin-right: 35px; /* Linkler arasındaki boşluk */
+}
+
+.main-menu li:last-child {
+    margin-right: 0; /* Son elemanın sağ boşluğunu kaldır */
+}
+
+/* Navigasyon alanını sağa yasla ve hizala */
+.top-nav-area {
+    display: flex;
+    justify-content: flex-end; /* Menüyü sağa iter */
+    align-items: center;
+}
+
+/* Mobilde menü linklerinin birbirine girmemesi için padding */
+.main-menu li a {
+    padding: 10px 15px;
+    display: block;
+}
+/* Body tüm sayfa için mor yap */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #9b59b6; /* tatlı mor arka plan */
+    color: #fff;
+}
+
+/* Video hero / üst bölüm mor yap */
+.video-bg-section {
+     background-color: #4b0082; /* koyu mor (indigo) */
+     position: relative;
+    width: 100%;
+    min-height: 100vh; /* tam ekran yüksekliği */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+</style>
+
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-warp">
+			<div class="header-social d-flex justify-content-end">
+				<p style="color: #fff; text-decoration: underline; font-weight: bold; font-size: 24px; letter-spacing: 1px;">Follow me:</p>
+
+
+				
+				<a href="https://x.com/yepislegames"target="_blank"><i class="fa fa-twitter fa-4x"></i></a>
+				<a href="https://github.com/yepislegames"target="_blank"><i class="fa fa-github fa-4x"></i></a>
+				<a href="https://yepislegames.itch.io/" target="_blank">
+                   <i class="fab fa-itch-io fa-4x"></i> 
+                 </a>
+				  <a href="https://www.linkedin.com/in/yepisle-games-550ba0385/" target="_blank">
+                    <i class="fab fa-linkedin fa-4x"></i>
+                  </a>
+			</div>
+			<div class="header-bar-warp d-flex">
+				<!-- site logo -->
+				<a href="index.html" class="site-logo">
+					<img src="./img/logo.png" alt="" style="width:300px; height:auto; 
+                    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.5));animation: neonPulse 2.2s infinite alternate;">
+					
+                
+                     
+				</a>
+				<nav class="top-nav-area w-100">
+					
+					<!-- Menu -->
+					<ul class="main-menu primary-menu">
+					    <li><a href="About.html" style="font-size: 40px; font-weight: bold;">About</a></li>
+						<li><a href="index.html" style="font-size: 40px; font-weight: bold;">Home</a></li>
+                        <li><a href="games.html" style="font-size: 40px; font-weight: bold;">Games</a></li>
+                        <li><a href="contact.html" style="font-size: 40px; font-weight: bold;">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Hero section -->
+	<section class="play-wrapper video-bg-section">
+  
+
+   <div class="content-wrapper">
+       <a href="https://yepislegames.itch.io/" target="_blank" class="big-play-btn">
+           <i class="fa fa-play"></i>
+       </a>
+       <div class="play-text">
+           PLAY MY GAMES ON ITCH.IO
+       </div>
+   </div>
+</section>
+	<!-- Hero section end-->
+
+
+	<!-- Intro section end -->
+
+
+	
+
+
+	
+
+
+	
+
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			
+			<a href="#" class="footer-logo">
+				<img src="./img/logo.png" alt="">
+			</a>
+			<ul class="main-menu footer-menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="games.html">Games</a></li>
+			
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			   <div class="footer-social d-flex justify-content-center">
+
+                <a href="https://x.com/yepislegames" target="_blank">
+                 <i class="fa-brands fa-twitter fa-4x"></i>
+                 </a>
+
+                <a href="https://github.com/yepislegames" target="_blank">
+                 <i class="fa-brands fa-github fa-4x"></i>
+               </a>
+
+                <a href="https://yepislegames.itch.io/" target="_blank">
+                 <i class="fa-brands fa-itch-io fa-4x"></i> 
+                 </a>
+
+              <a href="https://www.linkedin.com/in/yepisle-games-550ba0385/" target="_blank">
+               <i class="fa-brands fa-linkedin fa-4x"></i>
+               </a>
+ 
+           </div>
+			<div class="copyright"><a href="">YEPISLE GAMES</a> 2026 @ All rights reserved</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky-sidebar.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
