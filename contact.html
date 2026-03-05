@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zxx">
 <head>
 	<title>Yepisle Games</title>
@@ -247,4 +247,14 @@
 	<script src="js/main.js"></script>
 
 	</body>
+             <!-- Sayfanın sonunda -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Eğer kullanıcı 18+ onaylamadıysa, ana sayfaya yönlendir
+    if (localStorage.getItem('ageVerified') !== 'true') {
+        window.location.href = "index.html"; // Ana sayfa veya modalın olduğu sayfa
+    }
+});
+</script>
+</body>
 </html>
