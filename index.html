@@ -1,4 +1,4 @@
-﻿ <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zxx">
 <head>
 	<title>Yepisle Games</title>
@@ -216,6 +216,43 @@
   backdrop-filter: blur(6px);
   margin-top: 93px;
 }
+
+#ageModal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+   
+}
+
+#ageModalContent {
+    text-align: center;
+    background-color: rgba(128,0,128,0.8);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#ageText {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#ageButton {
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #a855f7, #9333ea);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
 </style>
 
 	<!--[if lt IE 9]>
@@ -225,6 +262,21 @@
 
 </head>
 <body>
+  <!-- 18+ Age Modal -->
+    <!-- 18+ Age Modal -->
+
+     <!-- 18+ Age Modal -->
+    <!-- 18+ Age Modal -->
+   <div id="ageModal">
+    <div id="ageModalContent">
+        <h2 id="ageText">Are you 18+?</h2>
+        <button id="ageButton">I am 18+</button>
+    </div>
+   </div>
+
+
+
+
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -360,4 +412,34 @@
 	<script src="js/main.js"></script>
 
 	</body>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const ageModal = document.getElementById('ageModal');
+       const ageText = document.getElementById('ageText');
+       const ageButton = document.getElementById('ageButton');
+
+    // Eğer daha önce onaylandıysa açma
+    if (localStorage.getItem('ageVerified') === 'true') return;
+
+    // Dil kontrolü
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith('tr')) {
+        ageText.textContent = '18 yaşından büyük müsünüz? KUCUKSENIZ SAYFAYI KAPATIN';
+        ageButton.textContent = '18 YAS USTUYUM';
+    } else {
+        ageText.textContent = 'Are you 18+?';
+        ageButton.textContent = 'I am 18+';
+    }
+
+    // Modalı göster
+    ageModal.style.display = 'flex';
+
+    // Buton tıklaması
+    ageButton.addEventListener('click', () => {
+        localStorage.setItem('ageVerified', 'true');
+        ageModal.style.display = 'none';
+    });
+});
+</script>
+   
 </html>
